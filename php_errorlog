@@ -1,0 +1,8 @@
+[03-May-2020 16:42:45 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/reload63/public_html/wp/wp-content/themes/reload-cms2/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/reload63/public_html/wp/wp-content/themes/reload-cms2/index.php on line 16
+[03-May-2020 16:42:47 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/reload63/public_html/wp/wp-content/themes/reload-cms2/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/reload63/public_html/wp/wp-content/themes/reload-cms2/index.php on line 16
