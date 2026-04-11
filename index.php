@@ -8,41 +8,121 @@ get_header();
     <main id="main" class="site-main">
 
         <!-- ================================================
-             HERO
+             HERO CAROUSEL
              ================================================ -->
-        <section class="sd-hero" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/2.jpg')">
-            <div class="sd-hero-overlay"></div>
-            <div class="container sd-hero-container">
-                <div class="row align-items-center sd-hero-row">
-                    <div class="col-lg-7">
-                        <div class="sd-hero-content">
-                            <span class="sd-hero-eyebrow"><i class="fe-icon-map-pin"></i> Врање, Србија</span>
-                            <h1 class="sd-hero-title">Спортско друштво<br><strong>Врање 1093</strong></h1>
-                            <p class="sd-hero-desc">Друштво је спортска организација која промовише спорт и здрав начин живота кроз разноврсне активности за све грађане општине Врање.</p>
-                            <div class="sd-hero-btns">
-                                <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
-                                <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 d-none d-lg-block">
-                        <div class="sd-hero-carousel-wrap">
-                            <div class="sd-hero-badge-float">
-                                <i class="fe-icon-award"></i>
-                                <span>од 1093. године</span>
-                            </div>
-                            <div class="owl-carousel sd-hero-owl"
-                                 data-owl-carousel='{"nav":false,"dots":true,"loop":true,"items":1,"autoplay":true,"autoplayTimeout":3800,"smartSpeed":600}'>
-                                <div class="sd-hero-slide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/1.jpg" alt="Спортско друштво Врање 1093"></div>
-                                <div class="sd-hero-slide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/2.jpg" alt="Спортско друштво Врање 1093"></div>
-                                <div class="sd-hero-slide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/3.jpg" alt="Спортско друштво Врање 1093"></div>
-                                <div class="sd-hero-slide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/4.jpg" alt="Спортско друштво Врање 1093"></div>
-                                <div class="sd-hero-slide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/5.jpg" alt="Спортско друштво Врање 1093"></div>
-                                <div class="sd-hero-slide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/6.jpg" alt="Спортско друштво Врање 1093"></div>
+        <?php $ci = get_stylesheet_directory_uri() . '/img/carousel/'; ?>
+        <section class="sd-hero-full">
+            <div class="owl-carousel sd-main-carousel dots-inside"
+                 data-owl-carousel='{"nav":true,"dots":true,"loop":true,"items":1,"autoplay":true,"autoplayTimeout":5000,"smartSpeed":900}'>
+
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00003.jpeg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-map-pin"></i> Врање, Србија</span>
+                                <h1 class="sd-hero-title">Спортско друштво<br><strong>Врање 1093</strong></h1>
+                                <p class="sd-hero-desc">Промовишемо спорт и здрав начин живота кроз разноврсне активности за све грађане општине Врање.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00004.jpeg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-award"></i> Спортски резултати</span>
+                                <h1 class="sd-hero-title">Поносни на<br><strong>наше резултате</strong></h1>
+                                <p class="sd-hero-desc">Деценије успешног рада и постигнутих резултата на локалном, регионалном и националном нивоу.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/архива' ?>">Архива</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00005.jpeg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-users"></i> Чланство</span>
+                                <h1 class="sd-hero-title">Придружите се<br><strong>нашем тиму</strong></h1>
+                                <p class="sd-hero-desc">Постаните члан Спортског друштва Врање 1093 и учествујте у спортским активностима за све узрасте.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/контакт' ?>">Постани члан</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00006.jpeg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-calendar"></i> Догађаји</span>
+                                <h1 class="sd-hero-title">Предстојећи<br><strong>спортски догађаји</strong></h1>
+                                <p class="sd-hero-desc">Пратите све актуелности и најаве спортских такмичења и активности у општини Врање.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/најава-догађаја' ?>">Најаве</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00007.jpeg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-star"></i> Традиција</span>
+                                <h1 class="sd-hero-title">Вековна<br><strong>спортска традиција</strong></h1>
+                                <p class="sd-hero-desc">Спортско друштво Врање 1093 — организација са дугом историјом у служби спорта и заједнице.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">Наша историја</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00008.jpeg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-flag"></i> Општина Врање</span>
+                                <h1 class="sd-hero-title">Спорт у срцу<br><strong>Врања</strong></h1>
+                                <p class="sd-hero-desc">Окупљамо спортисте свих узраста и промовишемо здрав и активан живот у општини Врање.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Badge -->
+            <div class="sd-hero-float-badge">
+                <i class="fe-icon-award"></i>
+                <span>од 1093. године</span>
             </div>
         </section>
 
