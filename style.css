@@ -22345,15 +22345,11 @@ body.sd-mob-open { overflow: hidden; }
 .sd-topbar-brand {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.78rem;
-    color: #7a8fb8;
-    letter-spacing: 0.02em;
-}
-
-.sd-topbar-brand i {
-    color: #e8b800;
-    font-size: 0.85rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
 }
 
 .sd-topbar-nav {
@@ -22367,15 +22363,16 @@ body.sd-mob-open { overflow: hidden; }
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
-    height: 100%;
+    align-items: stretch;
+    height: 38px;
     gap: 0;
 }
 
 .sd-topbar-list li {
     display: flex;
     align-items: center;
-    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .sd-topbar-list li + li::before {
@@ -22398,6 +22395,8 @@ body.sd-mob-open { overflow: hidden; }
     transition: color 0.15s;
     white-space: nowrap;
     line-height: 1;
+    padding: 0;
+    margin: 0;
 }
 
 .sd-topbar-list li a:hover { color: #e8b800; text-decoration: none; }
@@ -22424,7 +22423,8 @@ body.sd-mob-open { overflow: hidden; }
     transition: box-shadow 0.25s;
     height: 68px;
     display: flex;
-    align-items: center;
+    /* align-items: stretch so children fill the full 68px height */
+    align-items: stretch;
 }
 
 .sd-header--scrolled {
@@ -22438,6 +22438,8 @@ body.sd-mob-open { overflow: hidden; }
     justify-content: space-between;
     width: 100%;
     gap: 1.5rem;
+    /* explicit height so children can use height:100% */
+    height: 68px;
 }
 
 /* ── Logo ────────────────────────────────────── */
@@ -22455,14 +22457,18 @@ body.sd-mob-open { overflow: hidden; }
 }
 
 /* ── Desktop nav ─────────────────────────────── */
-.sd-nav { align-items: center; }
+.sd-nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
 .sd-nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 0.15rem;
     height: 100%;
 }
@@ -22472,6 +22478,8 @@ body.sd-mob-open { overflow: hidden; }
     display: flex;
     align-items: center;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .sd-nav-link {

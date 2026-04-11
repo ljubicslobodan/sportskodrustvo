@@ -55,7 +55,6 @@
     <div class="container">
         <div class="sd-topbar-inner">
             <span class="sd-topbar-brand">
-                <i class="fe-icon-award"></i>
                 Спортско друштво Врање 1093
             </span>
             <nav class="sd-topbar-nav" aria-label="Секундарни мени">
