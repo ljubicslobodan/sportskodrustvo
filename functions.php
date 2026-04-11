@@ -103,8 +103,150 @@ function remove_footer_admin ()
     echo '<span id="footer-thankyou">Ово је специјализовани софтвер за јавна предузећа и установе који је развила фирма Релоад. <a href="http://www.reload.rs" target="_blank">Посетите веб-страницу фирме Релоад.</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
-function new_submenu_class($menu) {
-    $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$menu);
-    return $menu;
+/**
+ * Desktop nav walker — outputs sd-nav-* classes with dropdown support
+ */
+class SD_Nav_Walker extends Walker_Nav_Menu {
+    public function start_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '<ul class="sd-dropdown">';
+    }
+    public function end_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '</ul>';
+    }
+    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $has_children = in_array( 'menu-item-has-children', $item->classes );
+        $is_active    = in_array( 'current-menu-item', $item->classes )
+                     || in_array( 'current-menu-ancestor', $item->classes )
+                     || in_array( 'current-menu-parent', $item->classes );
+
+        if ( $depth === 0 ) {
+            $li_cls = 'sd-nav-item';
+            if ( $has_children ) $li_cls .= ' sd-nav-item--has-dropdown';
+            if ( $is_active )    $li_cls .= ' sd-nav-item--active';
+
+            $output .= '<li class="' . esc_attr( $li_cls ) . '">';
+            $a_cls   = 'sd-nav-link' . ( $is_active ? ' sd-nav-link--active' : '' );
+            $chevron = $has_children ? '<i class="fe-icon-chevron-down sd-nav-chevron"></i>' : '';
+            $output .= '<a href="' . esc_url( $item->url ) . '" class="' . $a_cls . '">'
+                     . esc_html( $item->title ) . $chevron . '</a>';
+        } else {
+            $is_active_sub = in_array( 'current-menu-item', $item->classes );
+            $li_cls = 'sd-dropdown-item' . ( $is_active_sub ? ' sd-dropdown-item--active' : '' );
+            $output .= '<li class="' . esc_attr( $li_cls ) . '">';
+            $output .= '<a href="' . esc_url( $item->url ) . '" class="sd-dropdown-link">'
+                     . esc_html( $item->title ) . '</a>';
+        }
+    }
+    public function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= '</li>';
+    }
 }
-add_filter('wp_nav_menu','new_submenu_class');
+
+/**
+ * Mobile nav walker — outputs sd-mob-* classes with accordion support
+ */
+class SD_Mobile_Walker extends Walker_Nav_Menu {
+    public function start_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '<ul class="sd-mob-dropdown">';
+    }
+    public function end_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '</ul>';
+    }
+    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $has_children = in_array( 'menu-item-has-children', $item->classes );
+        $is_active    = in_array( 'current-menu-item', $item->classes )
+                     || in_array( 'current-menu-ancestor', $item->classes );
+
+        if ( $depth === 0 ) {
+            $li_cls = 'sd-mob-item' . ( $has_children ? ' sd-mob-item--has-dropdown' : '' )
+                                    . ( $is_active ? ' sd-mob-item--active' : '' );
+            $output .= '<li class="' . esc_attr( $li_cls ) . '">';
+            $output .= '<div class="sd-mob-item-row">';
+            $output .= '<a href="' . esc_url( $item->url ) . '" class="sd-mob-link">'
+                     . esc_html( $item->title ) . '</a>';
+            if ( $has_children ) {
+                $output .= '<button class="sd-mob-chevron-btn" type="button" aria-expanded="false" aria-label="Прошири">'
+                         . '<i class="fe-icon-chevron-down"></i></button>';
+            }
+            $output .= '</div>';
+        } else {
+            $output .= '<li class="sd-mob-sub-item">';
+            $output .= '<a href="' . esc_url( $item->url ) . '" class="sd-mob-sub-link">'
+                     . esc_html( $item->title ) . '</a>';
+        }
+    }
+    public function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= '</li>';
+    }
+}
+
+/**
+ * Mobile menu + header scroll JS (runs after jQuery)
+ */
+add_action( 'wp_footer', function () { ?>
+<script>
+(function($) {
+    var $header   = $('#sd-header');
+    var $drawer   = $('#sd-mob-drawer');
+    var $overlay  = $('#sd-mob-overlay');
+    var $hamburger = $('#sd-hamburger');
+    var $close    = $('#sd-mob-close');
+
+    function openDrawer() {
+        $drawer.addClass('sd-mob-drawer--open').attr('aria-hidden', 'false');
+        $overlay.addClass('sd-mob-overlay--visible');
+        $hamburger.attr('aria-expanded', 'true');
+        $('body').addClass('sd-mob-open');
+    }
+    function closeDrawer() {
+        $drawer.removeClass('sd-mob-drawer--open').attr('aria-hidden', 'true');
+        $overlay.removeClass('sd-mob-overlay--visible');
+        $hamburger.attr('aria-expanded', 'false');
+        $('body').removeClass('sd-mob-open');
+    }
+
+    $hamburger.on('click', openDrawer);
+    $close.on('click', closeDrawer);
+    $overlay.on('click', closeDrawer);
+
+    // Mobile accordion
+    $(document).on('click', '.sd-mob-chevron-btn', function() {
+        var $btn  = $(this);
+        var $item = $btn.closest('.sd-mob-item--has-dropdown');
+        var $drop = $item.find('> .sd-mob-dropdown');
+        var isOpen = $item.hasClass('sd-mob-item--open');
+
+        // Close others
+        $('.sd-mob-item--open').not($item).each(function() {
+            $(this).removeClass('sd-mob-item--open')
+                   .find('> .sd-mob-dropdown').slideUp(220);
+            $(this).find('.sd-mob-chevron-btn').attr('aria-expanded', 'false');
+        });
+
+        if (isOpen) {
+            $item.removeClass('sd-mob-item--open');
+            $drop.slideUp(220);
+            $btn.attr('aria-expanded', 'false');
+        } else {
+            $item.addClass('sd-mob-item--open');
+            $drop.slideDown(220);
+            $btn.attr('aria-expanded', 'true');
+        }
+    });
+
+    // Header scroll shadow
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 24) {
+            $header.addClass('sd-header--scrolled');
+        } else {
+            $header.removeClass('sd-header--scrolled');
+        }
+    });
+
+    // Close drawer on ESC
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') closeDrawer();
+    });
+})(jQuery);
+</script>
+<?php } );
