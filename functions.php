@@ -1,4 +1,7 @@
 <?php
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'home-post-thumb', 400, 225, true );
+
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
   wp_enqueue_style( 'child-style1', get_stylesheet_directory_uri() . '/vendor.min.css');
