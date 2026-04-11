@@ -22617,6 +22617,27 @@ body.sd-mob-open { overflow: hidden; }
     transition: opacity 0.15s, color 0.15s;
 }
 
+/* SVG sport icon — handball */
+.sd-sport-svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    color: #163070;
+    opacity: 0.55;
+    transition: opacity 0.15s, color 0.15s;
+    display: block;
+}
+
+.sd-dropdown-link:hover .sd-sport-svg {
+    opacity: 1;
+    color: #e8b800;
+}
+
+.sd-dropdown-item--active .sd-sport-svg {
+    opacity: 1;
+    color: #163070;
+}
+
 .sd-dropdown-link:hover .sd-dropdown-icon {
     opacity: 1;
     color: #e8b800;

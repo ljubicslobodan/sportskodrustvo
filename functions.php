@@ -5,6 +5,7 @@ add_image_size( 'home-post-thumb', 400, 225, true );
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
   wp_enqueue_style( 'child-style1', get_stylesheet_directory_uri() . '/vendor.min.css');
+  wp_enqueue_style( 'font-awesome-6', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1' );
   wp_enqueue_style( 'child-style2', get_stylesheet_directory_uri() . '/style.css' );
   wp_enqueue_script( 'script2', get_stylesheet_directory_uri() . '/js/vendor.min.js');
   wp_enqueue_script( 'script3', get_stylesheet_directory_uri() . '/js/theme.min.js');
@@ -130,20 +131,25 @@ class SD_Nav_Walker extends Walker_Nav_Menu {
             $output .= '<a href="' . esc_url( $item->url ) . '" class="' . $a_cls . '">'
                      . esc_html( $item->title ) . $chevron . '</a>';
         } else {
-            $icon_map = [
-                'М рукомет' => 'fe-icon-users',
-                'Ж рукомет' => 'fe-icon-users',
-                'М одбојка' => 'fe-icon-activity',
-                'Ж одбојка' => 'fe-icon-activity',
-                'Футсал'    => 'fe-icon-target',
+            // Sport-specific icons: FA6 za volleyball/futsal, SVG za handball
+            $handball_svg = '<svg class="sd-sport-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5c-3.5 3-3.5 16 0 19"/><path d="M12 2.5c3.5 3 3.5 16 0 19"/></svg>';
+
+            $icon_html_map = [
+                'М рукомет' => $handball_svg,
+                'Ж рукомет' => $handball_svg,
+                'М одбојка' => '<i class="fa-solid fa-volleyball sd-dropdown-icon"></i>',
+                'Ж одбојка' => '<i class="fa-solid fa-volleyball sd-dropdown-icon"></i>',
+                'Футсал'    => '<i class="fa-solid fa-futbol sd-dropdown-icon"></i>',
             ];
-            $icon_cls = isset( $icon_map[ $item->title ] ) ? $icon_map[ $item->title ] : 'fe-icon-arrow-right';
+            $icon_html = isset( $icon_html_map[ $item->title ] )
+                ? $icon_html_map[ $item->title ]
+                : '<i class="fe-icon-arrow-right sd-dropdown-icon"></i>';
 
             $is_active_sub = in_array( 'current-menu-item', $item->classes );
             $li_cls = 'sd-dropdown-item' . ( $is_active_sub ? ' sd-dropdown-item--active' : '' );
             $output .= '<li class="' . esc_attr( $li_cls ) . '">';
             $output .= '<a href="' . esc_url( $item->url ) . '" class="sd-dropdown-link">'
-                     . '<i class="' . $icon_cls . ' sd-dropdown-icon"></i>'
+                     . $icon_html
                      . '<span>' . esc_html( $item->title ) . '</span>'
                      . '</a>';
         }
