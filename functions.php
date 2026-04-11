@@ -130,11 +130,22 @@ class SD_Nav_Walker extends Walker_Nav_Menu {
             $output .= '<a href="' . esc_url( $item->url ) . '" class="' . $a_cls . '">'
                      . esc_html( $item->title ) . $chevron . '</a>';
         } else {
+            $icon_map = [
+                'М рукомет' => 'fe-icon-users',
+                'Ж рукомет' => 'fe-icon-users',
+                'М одбојка' => 'fe-icon-activity',
+                'Ж одбојка' => 'fe-icon-activity',
+                'Футсал'    => 'fe-icon-target',
+            ];
+            $icon_cls = isset( $icon_map[ $item->title ] ) ? $icon_map[ $item->title ] : 'fe-icon-arrow-right';
+
             $is_active_sub = in_array( 'current-menu-item', $item->classes );
             $li_cls = 'sd-dropdown-item' . ( $is_active_sub ? ' sd-dropdown-item--active' : '' );
             $output .= '<li class="' . esc_attr( $li_cls ) . '">';
             $output .= '<a href="' . esc_url( $item->url ) . '" class="sd-dropdown-link">'
-                     . esc_html( $item->title ) . '</a>';
+                     . '<i class="' . $icon_cls . ' sd-dropdown-icon"></i>'
+                     . '<span>' . esc_html( $item->title ) . '</span>'
+                     . '</a>';
         }
     }
     public function end_el( &$output, $item, $depth = 0, $args = null ) {
