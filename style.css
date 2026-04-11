@@ -21609,3 +21609,711 @@ a:hover { color: #0c1835; }
     .sd-main-carousel .owl-nav button.owl-next { display: none !important; }
 }
 
+
+/* ==========================================================
+   STATIC PAGE — sd-page-* components
+   ========================================================== */
+
+.sd-page-header {
+    background: linear-gradient(105deg, #0c1835 0%, #163070 100%);
+    padding: 2.5rem 0 2.25rem;
+}
+
+.sd-page-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0.75rem 0 0;
+    letter-spacing: -0.02em;
+}
+
+.sd-page-title::after {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 3px;
+    background: #e8b800;
+    margin-top: 0.7rem;
+    border-radius: 2px;
+}
+
+/* Featured image */
+.sd-page-hero-img {
+    background: #0c1835;
+    padding-bottom: 2.5rem;
+}
+
+.sd-page-hero-wrap {
+    max-width: 860px;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+}
+
+.sd-page-featured-img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+.sd-page-content-section {
+    padding: 3.5rem 0 5rem;
+    background: #fff;
+}
+
+.sd-page-content-wrap {
+    max-width: 860px;
+}
+
+/* Typography — inherits sd-post-content styles, add page-specific */
+.sd-page-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #2c3340;
+}
+
+.sd-page-content p { margin-bottom: 1.5rem; }
+
+.sd-page-content h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #163070;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e8b800;
+}
+
+.sd-page-content h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e2530;
+    margin: 2rem 0 0.75rem;
+}
+
+.sd-page-content h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e2530;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.sd-page-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.sd-page-content a {
+    color: #163070;
+    text-decoration: underline;
+    text-decoration-color: rgba(22,48,112,0.3);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.sd-page-content a:hover {
+    color: #e8b800;
+    text-decoration-color: #e8b800;
+}
+
+.sd-page-content ul,
+.sd-page-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sd-page-content li { margin-bottom: 0.4rem; }
+
+.sd-page-content blockquote {
+    border-left: 4px solid #e8b800;
+    background: #f8f9fb;
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.sd-page-content blockquote p { margin-bottom: 0; }
+
+.sd-page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.sd-page-content table th {
+    background: #163070;
+    color: #fff;
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.sd-page-content table td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.sd-page-content table tr:nth-child(even) td {
+    background: #f8f9fb;
+}
+
+/* Footer nav */
+.sd-page-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+    .sd-page-content { font-size: 1rem; }
+    .sd-page-featured-img { max-height: 260px; }
+}
+
+/* O NAMA — intro paragraph */
+.sd-page-content p.sd-page-intro {
+    font-size: 1.13rem;
+    line-height: 1.8;
+    color: #333;
+    background: #f5f8ff;
+    border-left: 4px solid #163070;
+    padding: 1.1rem 1.4rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 2rem;
+}
+
+/* O NAMA — section headings */
+.sd-page-content h2 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #163070;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e8b800;
+    display: inline-block;
+}
+
+/* O NAMA — list styles */
+.sd-page-content ul.wp-block-list {
+    padding-left: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.sd-page-content ul.wp-block-list li {
+    margin-bottom: 0.55rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* O NAMA — separator */
+.sd-page-content .wp-block-separator {
+    border: none;
+    border-top: 1px solid #e2e2e2;
+    margin: 2rem 0 1.5rem;
+}
+
+/* =============================================
+   KONTAKT — contact cards
+   ============================================= */
+
+.sd-contact-grid {
+    margin-bottom: 2rem;
+}
+
+.sd-contact-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 1.2rem;
+    background: #fff;
+    border: 1px solid #e8eaf0;
+    border-radius: 10px;
+    padding: 1.8rem 1.5rem;
+    height: 100%;
+    box-shadow: 0 2px 12px rgba(22,48,112,0.07);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.sd-contact-card:hover {
+    box-shadow: 0 6px 24px rgba(22,48,112,0.13);
+    transform: translateY(-2px);
+}
+
+.sd-contact-card-icon {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background: #163070;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.sd-contact-card-icon i {
+    font-size: 1.6rem;
+    color: #e8b800;
+}
+
+.sd-contact-card-body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sd-contact-card-body > *:last-child {
+    margin-bottom: 0;
+}
+
+.sd-contact-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #163070;
+    margin: 0 0 0.4rem;
+}
+
+.sd-contact-card-text {
+    font-size: 0.97rem;
+    color: #555;
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+.sd-contact-link {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #163070;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.15s;
+}
+
+.sd-contact-link:hover {
+    color: #e8b800;
+    text-decoration: none;
+}
+
+.sd-contact-link i {
+    font-size: 0.85rem;
+}
+
+.sd-contact-email {
+    word-break: break-all;
+}
+
+/* KONTAKT — map */
+.sd-contact-map-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e8eaf0;
+    box-shadow: 0 2px 12px rgba(22,48,112,0.07);
+    margin-bottom: 2rem;
+}
+
+.sd-contact-map-wrap iframe {
+    display: block;
+}
+
+/* KONTAKT — web admin footer note */
+.sd-contact-webadmin {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sd-contact-webadmin-label {
+    font-size: 0.88rem;
+    color: #888;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.sd-contact-webadmin-label i {
+    font-size: 0.85rem;
+}
+
+.sd-contact-webadmin-link {
+    font-size: 0.88rem;
+    color: #163070;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sd-contact-webadmin-link:hover {
+    color: #e8b800;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .sd-contact-card-icon {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* =============================================
+   PRETRAGE — search page & results
+   ============================================= */
+
+/* Hero (searchpage.php) */
+.sd-search-hero {
+    background: #fff;
+    padding: 4rem 0 3.5rem;
+}
+
+.sd-search-hero-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sd-search-lead {
+    font-size: 1.05rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+/* Shared search form */
+.sd-search-form {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.sd-search-form--inline {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.sd-search-input-wrap {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #d0d5e8;
+    border-radius: 50px;
+    padding: 0.25rem 0.25rem 0.25rem 1.2rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 16px rgba(22,48,112,0.07);
+}
+
+.sd-search-input-wrap:focus-within {
+    border-color: #163070;
+    box-shadow: 0 4px 24px rgba(22,48,112,0.13);
+}
+
+.sd-search-icon {
+    color: #163070;
+    font-size: 1.1rem;
+    margin-right: 0.6rem;
+    flex-shrink: 0;
+}
+
+.sd-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+    color: #222;
+    background: transparent;
+    min-width: 0;
+    padding: 0.55rem 0;
+}
+
+.sd-search-input::placeholder {
+    color: #aaa;
+}
+
+.sd-search-btn {
+    flex-shrink: 0;
+    background: #163070;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s;
+}
+
+.sd-search-btn:hover {
+    background: #e8b800;
+    color: #0c1835;
+}
+
+/* Quick links */
+.sd-search-hints {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.sd-search-hints-label {
+    font-size: 0.83rem;
+    color: #999;
+    margin-right: 0.2rem;
+}
+
+/* Results section */
+.sd-search-results-section {
+    background: #f8f9fb;
+    padding: 3rem 0 5rem;
+    min-height: 50vh;
+}
+
+.sd-search-results-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Query title in header */
+.sd-search-query-title {
+    font-style: normal;
+    color: #e8b800;
+}
+
+/* Count line */
+.sd-search-count {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.sd-search-count i {
+    color: #163070;
+}
+
+.sd-search-count strong {
+    color: #163070;
+}
+
+/* Result items */
+.sd-search-results-list {
+    margin-top: 0.5rem;
+}
+
+.sd-search-result-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem 1.7rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(22,48,112,0.06);
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sd-search-result-item:hover {
+    border-left-color: #163070;
+    box-shadow: 0 4px 20px rgba(22,48,112,0.11);
+}
+
+.sd-search-result-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.sd-search-result-cat {
+    color: #163070;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+}
+
+.sd-search-result-cat:hover { color: #e8b800; text-decoration: none; }
+
+.sd-search-result-sep {
+    color: #ccc;
+}
+
+.sd-search-result-date {
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.sd-search-result-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 0.6rem;
+}
+
+.sd-search-result-link {
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sd-search-result-link:hover {
+    color: #163070;
+    text-decoration: none;
+}
+
+.sd-search-result-excerpt {
+    font-size: 0.93rem;
+    color: #666;
+    line-height: 1.65;
+    margin-bottom: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sd-search-result-more {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #163070;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s, gap 0.2s;
+}
+
+.sd-search-result-more:hover {
+    color: #e8b800;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+/* Pagination */
+.sd-search-pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.sd-search-pagination .page-numbers {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.35rem;
+}
+
+.sd-search-pagination .page-numbers li a,
+.sd-search-pagination .page-numbers li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 0.8rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid #dde0ed;
+    color: #163070;
+    background: #fff;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.sd-search-pagination .page-numbers li a:hover {
+    background: #163070;
+    color: #fff;
+    border-color: #163070;
+    text-decoration: none;
+}
+
+.sd-search-pagination .page-numbers li span.current {
+    background: #163070;
+    color: #fff;
+    border-color: #163070;
+}
+
+/* Empty state */
+.sd-search-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.sd-search-empty-icon {
+    width: 80px;
+    height: 80px;
+    background: #eef1fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.sd-search-empty-icon i {
+    font-size: 2rem;
+    color: #163070;
+}
+
+.sd-search-empty-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.6rem;
+}
+
+.sd-search-empty-text {
+    font-size: 0.97rem;
+    color: #888;
+    max-width: 440px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .sd-search-hero { padding: 2.5rem 0 2rem; }
+    .sd-search-btn { padding: 0.55rem 1rem; font-size: 0.82rem; }
+    .sd-search-input { font-size: 0.95rem; }
+    .sd-search-result-item { padding: 1.1rem 1.1rem; }
+    .sd-search-result-title { font-size: 1rem; }
+}
+
