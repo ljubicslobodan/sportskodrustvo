@@ -21089,11 +21089,16 @@ a:hover { color: #0c1835; }
     transition: all 0.2s;
 }
 
-.sd-archive-pagination .page-numbers:hover,
-.sd-archive-pagination .page-numbers.current {
-    background: #163070;
-    border-color: #163070;
+.sd-archive-pagination .page-numbers:hover {
+    background: #0c1835;
+    border-color: #0c1835;
     color: #fff;
+}
+
+.sd-archive-pagination .page-numbers.current {
+    background: #e8b800;
+    border-color: #e8b800;
+    color: #163070;
 }
 
 .sd-archive-pagination .page-numbers.prev,
@@ -21337,6 +21342,25 @@ a:hover { color: #0c1835; }
 .sd-post-content a:hover {
     color: #e8b800;
     text-decoration-color: #e8b800;
+}
+
+.sd-post-content .wp-block-button__link,
+.sd-post-content .wp-block-file__button {
+    background: #e8b800;
+    color: #0c1835;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+}
+
+.sd-post-content .wp-block-button__link:hover,
+.sd-post-content .wp-block-file__button:hover {
+    background: #d4a800;
+    color: #0c1835;
+    text-decoration: none;
 }
 
 .sd-post-content ul,
@@ -22310,9 +22334,9 @@ a:hover { color: #0c1835; }
 }
 
 .sd-search-pagination .page-numbers li span.current {
-    background: #163070;
-    color: #fff;
-    border-color: #163070;
+    background: #e8b800;
+    color: #163070;
+    border-color: #e8b800;
 }
 
 /* Empty state */
@@ -22444,6 +22468,9 @@ body.sd-mob-open { overflow: hidden; }
 }
 
 .sd-topbar-list li a:hover { color: #e8b800; text-decoration: none; }
+.sd-topbar-list li.current-menu-item a,
+.sd-topbar-list li.current_page_item a,
+.sd-topbar-list li a[aria-current="page"] { color: #e8b800 !important; }
 
 .sd-topbar-search-link {
     display: flex;

@@ -22,7 +22,7 @@ get_header();
                             <div class="sd-slide-content">
                                 <span class="sd-hero-eyebrow"><i class="fe-icon-map-pin"></i> Врање, Србија</span>
                                 <h1 class="sd-hero-title">Спортско друштво<br><strong>Врање 1093</strong></h1>
-                                <p class="sd-hero-desc">Промовишемо спорт и здрав начин живота кроз разноврсне активности за све грађане општине Врање.</p>
+                                <p class="sd-hero-desc">Спортска организација града Врања која обједињује клубове рукомета, одбојке, кошарке и футсала под једним кровом.</p>
                                 <div class="sd-hero-btns">
                                     <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
                                     <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
@@ -39,9 +39,9 @@ get_header();
                             <div class="sd-slide-content">
                                 <span class="sd-hero-eyebrow"><i class="fe-icon-award"></i> Спортски резултати</span>
                                 <h1 class="sd-hero-title">Поносни на<br><strong>наше резултате</strong></h1>
-                                <p class="sd-hero-desc">Деценије успешног рада и постигнутих резултата на локалном, регионалном и националном нивоу.</p>
+                                <p class="sd-hero-desc">Године успешног рада и постигнутих резултата на локалном, регионалном и националном нивоу.</p>
                                 <div class="sd-hero-btns">
-                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/архива' ?>">Архива</a>
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
                                     <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ get_header();
                             <div class="sd-slide-content">
                                 <span class="sd-hero-eyebrow"><i class="fe-icon-calendar"></i> Догађаји</span>
                                 <h1 class="sd-hero-title">Предстојећи<br><strong>спортски догађаји</strong></h1>
-                                <p class="sd-hero-desc">Пратите све актуелности и најаве спортских такмичења и активности у општини Врање.</p>
+                                <p class="sd-hero-desc">Пратите све актуелности и најаве спортских такмичења и активности у граду Врању.</p>
                                 <div class="sd-hero-btns">
                                     <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/најава-догађаја' ?>">Најаве</a>
                                     <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
@@ -73,7 +73,7 @@ get_header();
                             <div class="sd-slide-content">
                                 <span class="sd-hero-eyebrow"><i class="fe-icon-flag"></i> Општина Врање</span>
                                 <h1 class="sd-hero-title">Спорт у срцу<br><strong>Врања</strong></h1>
-                                <p class="sd-hero-desc">Окупљамо спортисте свих узраста и промовишемо здрав и активан живот у општини Врање.</p>
+                                <p class="sd-hero-desc">Окупљамо спортисте свих узраста и промовишемо здрав и активан живот у граду Врању.</p>
                                 <div class="sd-hero-btns">
                                     <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
                                     <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
@@ -241,7 +241,7 @@ get_header();
                         <div class="icon-box text-center">
                             <div class="icon-box-icon"><i class="fe-icon-target"></i></div>
                             <h3 class="icon-box-title">Наша мисија</h3>
-                            <p class="icon-box-text">Промовисање спорта и здравог начина живота кроз организовање спортских активности за све узрасте у општини Врање.</p>
+                            <p class="icon-box-text">Промовисање спорта и здравог начина живота кроз организовање спортских активности за све узрасте у граду Врању.</p>
                             <a class="icon-box-link" href="<?php echo home_url() . '/о-нама' ?>">Сазнај више <i class="fe-icon-arrow-right"></i></a>
                         </div>
                     </div>

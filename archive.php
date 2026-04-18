@@ -7,6 +7,9 @@ get_header();
 $default_thumb = get_stylesheet_directory_uri() . '/img/galerija/1.jpg';
 $cat_name      = single_cat_title( '', false );
 $cat_desc      = category_description();
+$cat_obj       = get_queried_object();
+$is_documenta  = $cat_obj && mb_strtolower( $cat_obj->name ) === 'документа';
+$doc_thumb     = get_stylesheet_directory_uri() . '/img/doc-placeholder.svg';
 ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
@@ -37,9 +40,11 @@ $cat_desc      = category_description();
 
                         <div class="sd-archive-list">
                             <?php while ( have_posts() ) : the_post();
-                                $thumb   = has_post_thumbnail()
-                                    ? get_the_post_thumbnail_url( null, 'medium' )
-                                    : $default_thumb;
+                                $thumb = $is_documenta
+                                    ? $doc_thumb
+                                    : ( has_post_thumbnail()
+                                        ? get_the_post_thumbnail_url( null, 'medium' )
+                                        : $default_thumb );
                                 $excerpt = has_excerpt()
                                     ? get_the_excerpt()
                                     : wp_trim_words( strip_tags( get_the_content() ), 20, '…' );

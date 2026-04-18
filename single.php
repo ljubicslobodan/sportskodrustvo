@@ -90,8 +90,8 @@ get_header();
 
                         <div class="sd-post-nav-links">
                             <?php
-                            $prev = get_previous_post();
-                            $next = get_next_post();
+                            $prev = get_previous_post( true, '', 'category' );
+                            $next = get_next_post( true, '', 'category' );
                             if ( $prev ) : ?>
                             <a href="<?php echo get_permalink( $prev->ID ); ?>" class="sd-post-nav-btn" title="<?php echo esc_attr( $prev->post_title ); ?>">
                                 <i class="fe-icon-chevron-left"></i> Претходно
