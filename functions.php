@@ -198,6 +198,22 @@ class SD_Mobile_Walker extends Walker_Nav_Menu {
 }
 
 /**
+ * Use single-tabele.php for posts in the "табеле" category
+ */
+add_filter( 'single_template', function ( $template ) {
+    $cat = get_category_by_slug( 'табеле' );
+    if ( ! $cat ) {
+        // Try finding by name if slug doesn't match
+        $cat = get_term_by( 'name', 'Табеле', 'category' );
+    }
+    if ( $cat && in_category( $cat->term_id ) ) {
+        $custom = get_stylesheet_directory() . '/single-tabele.php';
+        if ( file_exists( $custom ) ) return $custom;
+    }
+    return $template;
+} );
+
+/**
  * Mobile menu + header scroll JS (runs after jQuery)
  */
 add_action( 'wp_footer', function () { ?>

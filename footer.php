@@ -1,48 +1,105 @@
 <?php
 /**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since Twenty Nineteen 1.0
+ * Footer template
  */
 ?>
-    <footer class="bg-dark pt-3 pb-3">
+
+<footer class="sd-footer">
+
+    <!-- Main footer -->
+    <div class="sd-footer-main">
         <div class="container">
-            <div class="d-md-flex justify-content-between align-items-center text-center text-md-left mt-3 mb-3">
-                <div class="order-4 pt-3 text-center">
-                    <a href="<?php echo home_url() . '/политика-приватности' ?>">
-                        <div class="footer-link text-white ml-3">Политика приватности</div>
-                    </a><br>
-										<a href="<?php echo admin_url(); ?>">
-									<div class="footer-link text-white ml-3">Зона за администраторе</div>
-										</a>
-                </div>
-                <div class="order-2 pt-3 text-center footer-link text-white">
-<div><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo-2.png" alt="Grb Vranja" height="61" width="80" /></div>
-                </div>
-               <div class="order-3 pt-3 text-center">
-                    <a href="https://vranje.rs">
-                        <div class="m-0 text-sm text-white">
-                            <div><img src="<?php echo get_stylesheet_directory_uri();?>/img/vranjefooterlogo.png" alt="Grb Vranja" height="50" width="35" /></div>
-                            <span class='opacity-60'>Град Врање.</span>                            
+            <div class="row">
+
+                <!-- Brand column -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="sd-footer-brand">
+                        <a href="<?php echo home_url(); ?>" class="sd-footer-logo-link">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-2.png"
+                                 alt="<?php bloginfo( 'name' ); ?>"
+                                 class="sd-footer-logo">
+                        </a>
+                        <p class="sd-footer-about">
+                            Спортско друштво Врање 1093 — организација посвећена промовисању спорта и здравог начина живота у општини Врање.
+                        </p>
+                        <div class="sd-footer-social">
+                            <a href="https://www.facebook.com/profile.php?id=61570608391388" target="_blank" aria-label="Facebook">
+                                <i class="fe-icon-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/sportsko_drustvo_vranje_1093/?igsh=MXM0b2xvdTM2OXppOA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram">
+                                <i class="fe-icon-instagram"></i>
+                            </a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Links column -->
+                <div class="col-lg-2 col-md-3 col-6 mb-4 mb-lg-0">
+                    <h4 class="sd-footer-heading">Странице</h4>
+                    <ul class="sd-footer-links">
+                        <li><a href="<?php echo home_url(); ?>">Почетна</a></li>
+                        <li><a href="<?php echo home_url() . '/о-нама'; ?>">О нама</a></li>
+                        <li><a href="<?php echo home_url() . '/контакт'; ?>">Контакт</a></li>
+                        <li><a href="<?php echo home_url() . '/архива'; ?>">Архива</a></li>
+                        <li><a href="<?php echo home_url() . '/мапа-сајта'; ?>">Мапа сајта</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories column -->
+                <div class="col-lg-2 col-md-3 col-6 mb-4 mb-lg-0">
+                    <h4 class="sd-footer-heading">Садржај</h4>
+                    <ul class="sd-footer-links">
+                        <li><a href="<?php echo home_url() . '/category/вести'; ?>">Вести</a></li>
+                        <li><a href="<?php echo home_url() . '/category/најава-догађаја'; ?>">Најава догађаја</a></li>
+                        <li><a href="<?php echo home_url() . '/category/табеле'; ?>">Табеле</a></li>
+                        <li><a href="<?php echo home_url() . '/политика-приватности'; ?>">Политика приватности</a></li>
+                        <li><a href="<?php echo admin_url(); ?>">Администрација</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact column -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="sd-footer-heading">Контакт</h4>
+                    <ul class="sd-footer-contact">
+                        <li>
+                            <i class="fe-icon-map-pin"></i>
+                            <span>Иво Лоле Рибара 6<br>17500 Врање, Србија</span>
+                        </li>
+                        <li>
+                            <i class="fe-icon-mail"></i>
+                            <a href="mailto:sdvranje1093@vranje.org.rs">sdvranje1093@vranje.org.rs</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="sd-footer-bottom">
+        <div class="container">
+            <div class="sd-footer-bottom-inner">
+                <div class="sd-footer-copy">
+                    &copy; <?php echo date( 'Y' ); ?> Спортско друштво Врање 1093
+                </div>
+                <div class="sd-footer-partners">
+                    <a href="https://vranje.rs" target="_blank" class="sd-footer-partner" title="Град Врање">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/vranjefooterlogo.png" alt="Град Врање" height="28">
+                        <span>Град Врање</span>
                     </a>
-                </div>
-                <div class="order-1 pt-3 text-center">
-                    <a href="https://www.reload.rs" target="_blank">
-                        <div class="m-0 text-sm text-white order-3">
-                            <div><img src="<?php echo get_stylesheet_directory_uri();?>/img/reloadfooterlogo.png" alt="izrada vebsajta reload logo" height="50" width="44" /></div>
-                            <span class='d-inline-block nav-link text-white opacity-60 p-0'>Веб софтвер за јавне субјекте израдио: Релоад</span>
-                            <br><span class='opacity-60'>© Задржана права на софтвер и дизајн.</span>
-                        </div>
+                    <span class="sd-footer-sep"></span>
+                    <a href="https://www.reload.rs" target="_blank" class="sd-footer-partner" title="Релоад — израда веб-сајтова">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/reloadfooterlogo.png" alt="Релоад" height="28">
+                        <span>Израдио: Релоад</span>
                     </a>
                 </div>
             </div>
         </div>
-    </footer>
-   <?php wp_footer(); ?>
+    </div>
+
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>

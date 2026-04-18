@@ -49,23 +49,6 @@ get_header();
                     </div>
                 </div>
 
-                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00005.jpeg')">
-                    <div class="sd-slide-overlay"></div>
-                    <div class="container h-100">
-                        <div class="sd-slide-inner">
-                            <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-users"></i> Чланство</span>
-                                <h1 class="sd-hero-title">Придружите се<br><strong>нашем тиму</strong></h1>
-                                <p class="sd-hero-desc">Постаните члан Спортског друштва Врање 1093 и учествујте у спортским активностима за све узрасте.</p>
-                                <div class="sd-hero-btns">
-                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/контакт' ?>">Постани члан</a>
-                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00006.jpeg')">
                     <div class="sd-slide-overlay"></div>
                     <div class="container h-100">
@@ -77,23 +60,6 @@ get_header();
                                 <div class="sd-hero-btns">
                                     <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/најава-догађаја' ?>">Најаве</a>
                                     <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00007.jpeg')">
-                    <div class="sd-slide-overlay"></div>
-                    <div class="container h-100">
-                        <div class="sd-slide-inner">
-                            <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-star"></i> Традиција</span>
-                                <h1 class="sd-hero-title">Вековна<br><strong>спортска традиција</strong></h1>
-                                <p class="sd-hero-desc">Спортско друштво Врање 1093 — организација са дугом историјом у служби спорта и заједнице.</p>
-                                <div class="sd-hero-btns">
-                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">Наша историја</a>
-                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
                                 </div>
                             </div>
                         </div>
@@ -119,11 +85,6 @@ get_header();
 
             </div>
 
-            <!-- Badge -->
-            <div class="sd-hero-float-badge">
-                <i class="fe-icon-award"></i>
-                <span>од 1093. године</span>
-            </div>
         </section>
 
         <!-- ================================================
@@ -134,22 +95,22 @@ get_header();
                 <div class="row no-gutters">
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
-                            <i class="fe-icon-calendar sd-stat-icon"></i>
-                            <strong class="sd-stat-num">1093</strong>
+                            <i class="fe-icon-flag sd-stat-icon"></i>
+                            <strong class="sd-stat-num">2023</strong>
                             <span class="sd-stat-lbl">Година оснивања</span>
                         </div>
                     </div>
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
                             <i class="fe-icon-layers sd-stat-icon"></i>
-                            <strong class="sd-stat-num">10+</strong>
-                            <span class="sd-stat-lbl">Спортских грана</span>
+                            <strong class="sd-stat-num">5+</strong>
+                            <span class="sd-stat-lbl">Клубова</span>
                         </div>
                     </div>
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
                             <i class="fe-icon-users sd-stat-icon"></i>
-                            <strong class="sd-stat-num">500+</strong>
+                            <strong class="sd-stat-num">100+</strong>
                             <span class="sd-stat-lbl">Активних чланова</span>
                         </div>
                     </div>
@@ -305,61 +266,41 @@ get_header();
         </section>
 
         <!-- ================================================
-             ГАЛЕРИЈА CAROUSEL
+             ТАБЕЛЕ
              ================================================ -->
-        <section class="sd-gallery-section py-4">
+        <section class="sd-tables-section py-5">
             <div class="container">
-                <h2 class="h3 block-title text-center mb-4">Галерија<small>Фотографије са наших активности</small></h2>
-                <div class="owl-carousel"
-                     data-owl-carousel='{"nav":false,"dots":false,"loop":true,"margin":10,"autoplay":true,"autoplayTimeout":3000,"responsive":{"0":{"items":2},"576":{"items":3},"768":{"items":4},"992":{"items":5}}}'>
-                    <div class="sd-gallery-thumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/1.jpg" alt="Галерија"></div>
-                    <div class="sd-gallery-thumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/2.jpg" alt="Галерија"></div>
-                    <div class="sd-gallery-thumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/3.jpg" alt="Галерија"></div>
-                    <div class="sd-gallery-thumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/4.jpg" alt="Галерија"></div>
-                    <div class="sd-gallery-thumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/5.jpg" alt="Галерија"></div>
-                    <div class="sd-gallery-thumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/galerija/6.jpg" alt="Галерија"></div>
+                <h2 class="h3 block-title text-center mb-4">Табеле<small>Актуелни пласмани наших клубова</small></h2>
+                <div class="row justify-content-center">
+                    <?php
+                    $table_cat = get_category_by_slug( 'табеле' );
+                    if ( $table_cat ) :
+                        $table_posts = get_posts( [
+                            'category'       => $table_cat->term_id,
+                            'posts_per_page' => 8,
+                            'orderby'        => 'date',
+                            'order'          => 'DESC',
+                        ] );
+                        foreach ( $table_posts as $tp ) :
+                            setup_postdata( $tp );
+                            $thumb = has_post_thumbnail( $tp->ID )
+                                ? get_the_post_thumbnail_url( $tp->ID, 'home-post-thumb' )
+                                : $default_thumb;
+                    ?>
+                    <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex">
+                        <a href="<?php echo get_permalink( $tp ); ?>" class="sd-table-card w-100">
+                            <div class="sd-table-img-wrap">
+                                <img src="<?php echo esc_url( $thumb ); ?>"
+                                     alt="<?php echo esc_attr( $tp->post_title ); ?>"
+                                     class="sd-table-img">
+                            </div>
+                            <h3 class="sd-table-title"><?php echo esc_html( $tp->post_title ); ?></h3>
+                        </a>
+                    </div>
+                    <?php endforeach; wp_reset_postdata(); endif; ?>
                 </div>
-            </div>
-        </section>
-
-        <!-- ================================================
-             КОНТАКТ STRIP
-             ================================================ -->
-        <section class="sd-contact-bar py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <div class="sd-contact-block">
-                            <i class="fe-icon-mail sd-contact-ico"></i>
-                            <div>
-                                <h4 class="sd-contact-head">Електронска пошта</h4>
-                                <a class="sd-contact-val" href="mailto:sdvranje1093@vranje.org.rs">sdvranje1093@vranje.org.rs</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <div class="sd-contact-block">
-                            <i class="fe-icon-map-pin sd-contact-ico"></i>
-                            <div>
-                                <h4 class="sd-contact-head">Адреса</h4>
-                                <span class="sd-contact-val">Иво Лоле Рибара 6<br>17500 Врање, Србија</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="sd-contact-block">
-                            <i class="fe-icon-share-2 sd-contact-ico"></i>
-                            <div>
-                                <h4 class="sd-contact-head">Друштвене мреже</h4>
-                                <a class="sd-contact-val d-block" href="https://www.facebook.com/profile.php?id=61570608391388" target="_blank">
-                                    <i class="fe-icon-facebook mr-1"></i>Facebook страница
-                                </a>
-                                <a class="sd-contact-val d-block" href="https://www.instagram.com/sportsko_drustvo_vranje_1093/?igsh=MXM0b2xvdTM2OXppOA%3D%3D&utm_source=qr" target="_blank">
-                                    <i class="fe-icon-instagram mr-1"></i>Instagram профил
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center mt-2">
+                    <a class="btn btn-style-5 btn-secondary" href="<?php echo home_url() . '/category/табеле'; ?>">Погледајте све табеле</a>
                 </div>
             </div>
         </section>

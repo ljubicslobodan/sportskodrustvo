@@ -1,6 +1,6 @@
 <?php
 /**
- * Single post template
+ * Single post template for "Табеле" category
  */
 get_header();
 ?>
@@ -56,6 +56,17 @@ get_header();
                 </div>
             </div>
         </section>
+
+        <!-- Featured image (full size for tables) -->
+        <?php if ( has_post_thumbnail() ) : ?>
+        <div class="sd-post-hero-img" style="background:#fff; padding-top:2rem;">
+            <div class="container">
+                <div class="sd-post-hero-wrap" style="box-shadow:none;">
+                    <?php the_post_thumbnail( 'full', [ 'class' => 'sd-post-featured-img' ] ); ?>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
 
         <!-- Content -->
         <section class="sd-post-content-section">
