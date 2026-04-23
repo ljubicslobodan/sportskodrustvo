@@ -1,45 +1,6 @@
 <div class="col-lg-3">
     <aside class="sd-sidebar">
 
-        <!-- Quick links -->
-        <div class="sd-sidebar-widget">
-            <h3 class="sd-sidebar-title">
-                <i class="fe-icon-compass"></i> Навигација
-            </h3>
-            <ul class="sd-sidebar-nav">
-                <li>
-                    <a href="<?php echo home_url(); ?>">
-                        <i class="fe-icon-home"></i> Почетна
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url() . '/о-нама'; ?>">
-                        <i class="fe-icon-info"></i> О нама
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url() . '/category/вести'; ?>">
-                        <i class="fe-icon-file-text"></i> Вести
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url() . '/category/најава-догађаја'; ?>">
-                        <i class="fe-icon-calendar"></i> Најава догађаја
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url() . '/архива'; ?>">
-                        <i class="fe-icon-archive"></i> Архива
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url() . '/контакт'; ?>">
-                        <i class="fe-icon-mail"></i> Контакт
-                    </a>
-                </li>
-            </ul>
-        </div>
-
         <?php if ( is_home() ) : ?>
 
         <!-- Latest posts -->

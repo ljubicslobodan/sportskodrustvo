@@ -140,6 +140,7 @@ class SD_Nav_Walker extends Walker_Nav_Menu {
                 'М одбојка' => '<i class="fa-solid fa-volleyball sd-dropdown-icon"></i>',
                 'Ж одбојка' => '<i class="fa-solid fa-volleyball sd-dropdown-icon"></i>',
                 'Футсал'    => '<i class="fa-solid fa-futbol sd-dropdown-icon"></i>',
+                'Кошарка'   => '<i class="fa-solid fa-basketball sd-dropdown-icon"></i>',
             ];
             $icon_html = isset( $icon_html_map[ $item->title ] )
                 ? $icon_html_map[ $item->title ]

@@ -20,7 +20,7 @@ get_header();
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-map-pin"></i> Врање, Србија</span>
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-home"></i> Спортско друштво</span>
                                 <h1 class="sd-hero-title">Спортско друштво<br><strong>Врање 1093</strong></h1>
                                 <p class="sd-hero-desc">Спортска организација града Врања која обједињује клубове рукомета, одбојке, кошарке и футсала под једним кровом.</p>
                                 <div class="sd-hero-btns">
@@ -54,7 +54,7 @@ get_header();
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-calendar"></i> Догађаји</span>
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-calendar"></i> Најава догађаја</span>
                                 <h1 class="sd-hero-title">Предстојећи<br><strong>спортски догађаји</strong></h1>
                                 <p class="sd-hero-desc">Пратите све актуелности и најаве спортских такмичења и активности у граду Врању.</p>
                                 <div class="sd-hero-btns">
@@ -71,7 +71,7 @@ get_header();
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-flag"></i> Општина Врање</span>
+                                <span class="sd-hero-eyebrow"><i class="fe-icon-flag"></i> Град Врање</span>
                                 <h1 class="sd-hero-title">Спорт у срцу<br><strong>Врања</strong></h1>
                                 <p class="sd-hero-desc">Окупљамо спортисте свих узраста и промовишемо здрав и активан живот у граду Врању.</p>
                                 <div class="sd-hero-btns">
@@ -95,30 +95,30 @@ get_header();
                 <div class="row no-gutters">
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
-                            <i class="fe-icon-flag sd-stat-icon"></i>
-                            <strong class="sd-stat-num">2023</strong>
-                            <span class="sd-stat-lbl">Година оснивања</span>
+                            <i class="fa-solid fa-hand-back-fist sd-stat-icon"></i>
+                            <strong class="sd-stat-num">Рукомет</strong>
+                            <span class="sd-stat-lbl">М и Ж екипе</span>
                         </div>
                     </div>
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
-                            <i class="fe-icon-layers sd-stat-icon"></i>
-                            <strong class="sd-stat-num">5+</strong>
-                            <span class="sd-stat-lbl">Клубова</span>
+                            <i class="fa-solid fa-volleyball sd-stat-icon"></i>
+                            <strong class="sd-stat-num">Одбојка</strong>
+                            <span class="sd-stat-lbl">М и Ж екипе</span>
                         </div>
                     </div>
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
-                            <i class="fe-icon-users sd-stat-icon"></i>
-                            <strong class="sd-stat-num">100+</strong>
-                            <span class="sd-stat-lbl">Активних чланова</span>
+                            <i class="fa-solid fa-futbol sd-stat-icon"></i>
+                            <strong class="sd-stat-num">Футсал</strong>
+                            <span class="sd-stat-lbl">Мали фудбал</span>
                         </div>
                     </div>
                     <div class="col-6 col-sm-3 sd-stat-col">
                         <div class="sd-stat">
-                            <i class="fe-icon-star sd-stat-icon"></i>
-                            <strong class="sd-stat-num">30+</strong>
-                            <span class="sd-stat-lbl">Догађаја годишње</span>
+                            <i class="fa-solid fa-basketball sd-stat-icon"></i>
+                            <strong class="sd-stat-num">Кошарка</strong>
+                            <span class="sd-stat-lbl">Кошаркашки клуб</span>
                         </div>
                     </div>
                 </div>
