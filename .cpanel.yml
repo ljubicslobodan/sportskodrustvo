@@ -1,0 +1,8 @@
+---
+# cPanel Git Version Control deploy za sportskodrustvovranje1093.rs.
+# cPanel home: /home/uljanapl, sajt u addon domenu sportskodrustvovranje1093.rs.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/uljanapl/sportskodrustvovranje1093.rs/wp-content/themes/reload-cms2/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH

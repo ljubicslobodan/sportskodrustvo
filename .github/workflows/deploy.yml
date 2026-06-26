@@ -1,0 +1,40 @@
+name: Deploy tema na cPanel (sportskodrustvovranje1093.rs)
+
+# Pokreće se na svaki push na main + ručno iz Actions taba (Run workflow).
+# Secrets (GitHub → Settings → Secrets and variables → Actions):
+#   FTP_SERVER    npr. ftp.sportskodrustvovranje1093.rs  ili  IP servera
+#   FTP_USERNAME  cPanel/FTP korisnik (npr. uljanapl ili namenski FTP nalog)
+#   FTP_PASSWORD  lozinka tog FTP naloga
+# server-dir je relativan na home FTP naloga (/home/uljanapl) → tema ide u
+#   /home/uljanapl/sportskodrustvovranje1093.rs/wp-content/themes/reload-cms2/
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy preko FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          server-dir: sportskodrustvovranje1093.rs/wp-content/themes/reload-cms2/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/src/**
+            **/.DS_Store
+            **/package.json
+            **/package-lock.json
