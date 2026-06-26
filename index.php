@@ -15,14 +15,15 @@ get_header();
             <div class="owl-carousel sd-main-carousel dots-inside"
                  data-owl-carousel='{"nav":true,"dots":true,"loop":true,"items":1,"autoplay":true,"autoplayTimeout":5000,"smartSpeed":900}'>
 
-                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00003.jpeg')">
+                <!-- Слајд 1 — Колаж свих клубова (насловни) -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide1-kolaz.jpg')">
                     <div class="sd-slide-overlay"></div>
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
                                 <span class="sd-hero-eyebrow"><i class="fe-icon-home"></i> Спортско друштво</span>
                                 <h1 class="sd-hero-title">Спортско друштво<br><strong>Врање 1093</strong></h1>
-                                <p class="sd-hero-desc">Спортска организација града Врања која обједињује клубове рукомета, одбојке, кошарке и футсала под једним кровом.</p>
+                                <p class="sd-hero-desc">Шест клубова — једна породица, један циљ.</p>
                                 <div class="sd-hero-btns">
                                     <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
                                     <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
@@ -32,51 +33,108 @@ get_header();
                     </div>
                 </div>
 
-                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00004.jpeg')">
+                <!-- Слајд 2 — Мушки рукомет -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide2-rukomet-m.jpg')">
                     <div class="sd-slide-overlay"></div>
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-award"></i> Спортски резултати</span>
-                                <h1 class="sd-hero-title">Поносни на<br><strong>наше резултате</strong></h1>
-                                <p class="sd-hero-desc">Године успешног рада и постигнутих резултата на локалном, регионалном и националном нивоу.</p>
+                                <span class="sd-hero-eyebrow"><i class="fa-solid fa-hand-back-fist"></i> Рукометни клуб</span>
+                                <h1 class="sd-hero-title"><strong>Рукомет</strong></h1>
+                                <p class="sd-hero-desc">Традиција, борбеност и тимски дух.</p>
                                 <div class="sd-hero-btns">
-                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
-                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00006.jpeg')">
+                <!-- Слајд 3 — Клуб малог фудбала (футсал) -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide3-futsal.jpg')">
                     <div class="sd-slide-overlay"></div>
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-calendar"></i> Најава догађаја</span>
-                                <h1 class="sd-hero-title">Предстојећи<br><strong>спортски догађаји</strong></h1>
-                                <p class="sd-hero-desc">Пратите све актуелности и најаве спортских такмичења и активности у граду Врању.</p>
+                                <span class="sd-hero-eyebrow"><i class="fa-solid fa-futbol"></i> Футсал</span>
+                                <h1 class="sd-hero-title">Клуб малог<br><strong>фудбала</strong></h1>
+                                <p class="sd-hero-desc">Брзина, вештина и победнички менталитет.</p>
                                 <div class="sd-hero-btns">
-                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/најава-догађаја' ?>">Најаве</a>
-                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>image00008.jpeg')">
+                <!-- Слајд 4 — Мушка одбојка -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide4-odbojka-m.jpg')">
                     <div class="sd-slide-overlay"></div>
                     <div class="container h-100">
                         <div class="sd-slide-inner">
                             <div class="sd-slide-content">
-                                <span class="sd-hero-eyebrow"><i class="fe-icon-flag"></i> Град Врање</span>
-                                <h1 class="sd-hero-title">Спорт у срцу<br><strong>Врања</strong></h1>
-                                <p class="sd-hero-desc">Окупљамо спортисте свих узраста и промовишемо здрав и активан живот у граду Врању.</p>
+                                <span class="sd-hero-eyebrow"><i class="fa-solid fa-volleyball"></i> Одбојкашки клуб</span>
+                                <h1 class="sd-hero-title">Мушка<br><strong>одбојка</strong></h1>
+                                <p class="sd-hero-desc">Снага тима на сваком поену.</p>
                                 <div class="sd-hero-btns">
-                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/о-нама' ?>">О нама</a>
-                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/контакт' ?>">Контакт</a>
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слајд 5 — Женски рукомет -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide5-rukomet-z.jpg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fa-solid fa-hand-back-fist"></i> Женски рукометни клуб</span>
+                                <h1 class="sd-hero-title">Женски<br><strong>рукомет</strong></h1>
+                                <p class="sd-hero-desc">Посвећеност, енергија и спортски карактер.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слајд 6 — Женска одбојка -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide6-odbojka-z.jpg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fa-solid fa-volleyball"></i> Женски одбојкашки клуб</span>
+                                <h1 class="sd-hero-title">Женска<br><strong>одбојка</strong></h1>
+                                <p class="sd-hero-desc">Заједништво, борбеност и спортска елеганција.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слајд 7 — Кошарка -->
+                <div class="sd-slide" style="background-image:url('<?php echo $ci; ?>slide7-kosarka.jpg')">
+                    <div class="sd-slide-overlay"></div>
+                    <div class="container h-100">
+                        <div class="sd-slide-inner">
+                            <div class="sd-slide-content">
+                                <span class="sd-hero-eyebrow"><i class="fa-solid fa-basketball"></i> Кошаркашки клуб</span>
+                                <h1 class="sd-hero-title">Спорт у<br><strong>срцу</strong></h1>
+                                <p class="sd-hero-desc">Генерације спортиста, један заједнички сан.</p>
+                                <div class="sd-hero-btns">
+                                    <a class="btn btn-style-5 btn-warning mr-3 mb-2" href="<?php echo home_url() . '/category/вести' ?>">Вести</a>
+                                    <a class="btn btn-style-5 btn-light mb-2" href="<?php echo home_url() . '/category/табеле' ?>">Табеле</a>
                                 </div>
                             </div>
                         </div>
