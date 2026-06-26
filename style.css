@@ -23864,7 +23864,8 @@ body.sd-mob-open { overflow: hidden; }
    ИЗДВАЈАМО — featured news спотлајт (bottom-aligned, BBC/Guardian стил)
    ========================================================== */
 
-.sd-featured-carousel .owl-carousel { width: 100%; }
+.sd-featured-carousel { position: relative; }
+.sd-featured-carousel .owl-carousel { width: 100%; position: relative; }
 
 .sd-feat-slide {
     position: relative;
@@ -24016,22 +24017,32 @@ body.sd-mob-open { overflow: hidden; }
     color: #0c1835 !important;
 }
 
-/* Тачкице — доле десно да не сметају тексту */
+/* Тачкице — пун ред преко дна картице, поравнате десно */
 .sd-featured-carousel .owl-dots {
-    position: absolute;
-    bottom: 1.4rem;
-    right: 1.6rem;
-    left: auto;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 1.3rem !important;
+    top: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 1.7rem !important;
     z-index: 3;
-    display: flex;
-    gap: 6px;
+    text-align: right;
+    line-height: 1;
+}
+
+.sd-featured-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .sd-featured-carousel .owl-dots .owl-dot span {
+    display: block;
     width: 9px;
     height: 9px;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.55) !important;
     opacity: 1;
     transition: all 0.3s;
 }
@@ -24055,5 +24066,5 @@ body.sd-mob-open { overflow: hidden; }
     .sd-feat-btn { margin-top: 0.9rem; }
     .sd-featured-carousel .owl-nav button.owl-prev,
     .sd-featured-carousel .owl-nav button.owl-next { display: none !important; }
-    .sd-featured-carousel .owl-dots { bottom: 1rem; right: 1rem; }
+    .sd-featured-carousel .owl-dots { bottom: 1rem !important; padding: 0 1.2rem !important; }
 }
