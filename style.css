@@ -23857,3 +23857,203 @@ body.sd-mob-open { overflow: hidden; }
         padding: 0.85rem 1rem 1rem;
     }
 }
+
+
+
+/* ==========================================================
+   ИЗДВАЈАМО — featured news спотлајт (bottom-aligned, BBC/Guardian стил)
+   ========================================================== */
+
+.sd-featured-carousel .owl-carousel { width: 100%; }
+
+.sd-feat-slide {
+    position: relative;
+    display: block;
+    height: 440px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(8, 14, 30, 0.20);
+}
+
+.sd-feat-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 7s ease;
+}
+
+.sd-feat-slide:hover .sd-feat-img { transform: scale(1.06); }
+
+/* Scrim — провидан горе, таман доле (читљивост доњег текста) */
+.sd-feat-grad {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(8, 14, 30, 0.92) 0%,
+        rgba(8, 14, 30, 0.78) 22%,
+        rgba(8, 14, 30, 0.35) 50%,
+        rgba(8, 14, 30, 0) 75%
+    );
+}
+
+/* Caption — поравнат доле лево */
+.sd-feat-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1.75rem 2rem 1.9rem;
+    max-width: 720px;
+}
+
+/* Мета ред: категорија + датум */
+.sd-feat-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.sd-feat-cat {
+    background: #e8b800;
+    color: #0c1835;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.28rem 0.7rem;
+    border-radius: 5px;
+}
+
+.sd-feat-date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.sd-feat-date i { margin-right: 2px; }
+
+.sd-feat-title {
+    margin: 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.95rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sd-feat-excerpt {
+    margin: 0.7rem 0 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.98rem;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sd-feat-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1.1rem;
+    background: #163070;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.6rem 1.15rem;
+    border-radius: 6px;
+    transition: background-color 0.25s, transform 0.25s;
+}
+
+.sd-feat-slide:hover .sd-feat-btn {
+    background: #e8b800;
+    color: #0c1835;
+    transform: translateX(3px);
+}
+
+/* Стрелице */
+.sd-featured-carousel .owl-nav button.owl-prev,
+.sd-featured-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: #fff !important;
+    border-radius: 50%;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+    transition: opacity 0.25s, background-color 0.25s, border-color 0.25s;
+}
+
+.sd-featured-carousel:hover .owl-nav button.owl-prev,
+.sd-featured-carousel:hover .owl-nav button.owl-next { opacity: 1; }
+
+.sd-featured-carousel .owl-nav button.owl-prev { left: 1rem; }
+.sd-featured-carousel .owl-nav button.owl-next { right: 1rem; }
+
+.sd-featured-carousel .owl-nav button.owl-prev:hover,
+.sd-featured-carousel .owl-nav button.owl-next:hover {
+    background-color: #e8b800 !important;
+    border-color: #e8b800 !important;
+    color: #0c1835 !important;
+}
+
+/* Тачкице — доле десно да не сметају тексту */
+.sd-featured-carousel .owl-dots {
+    position: absolute;
+    bottom: 1.4rem;
+    right: 1.6rem;
+    left: auto;
+    z-index: 3;
+    display: flex;
+    gap: 6px;
+}
+
+.sd-featured-carousel .owl-dots .owl-dot span {
+    width: 9px;
+    height: 9px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.sd-featured-carousel .owl-dots .owl-dot.active span {
+    width: 26px;
+    border-radius: 5px;
+    background-color: #e8b800 !important;
+}
+
+@media (max-width: 991px) {
+    .sd-feat-slide { height: 380px; }
+    .sd-feat-title { font-size: 1.6rem; }
+}
+
+@media (max-width: 575px) {
+    .sd-feat-slide { height: 340px; }
+    .sd-feat-caption { padding: 1.3rem 1.3rem 1.5rem; }
+    .sd-feat-title { font-size: 1.25rem; -webkit-line-clamp: 3; }
+    .sd-feat-excerpt { display: none; }
+    .sd-feat-btn { margin-top: 0.9rem; }
+    .sd-featured-carousel .owl-nav button.owl-prev,
+    .sd-featured-carousel .owl-nav button.owl-next { display: none !important; }
+    .sd-featured-carousel .owl-dots { bottom: 1rem; right: 1rem; }
+}

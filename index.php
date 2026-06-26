@@ -191,6 +191,48 @@ get_header();
                 <div class="row">
                     <div class="col-lg-9">
 
+                        <!-- ИЗДВАЈАМО — мини карусел изнад вести -->
+                        <?php
+                        $default_thumb = get_stylesheet_directory_uri() . '/img/galerija/1.jpg';
+                        $feat_posts = get_posts([
+                            'posts_per_page' => 3,
+                            'orderby'        => 'date',
+                            'category'       => 6,
+                        ]);
+                        if ( $feat_posts ) : ?>
+                        <div class="sd-featured-carousel sd-featured-spotlight mb-5">
+                            <div class="owl-carousel"
+                                 data-owl-carousel='{"loop":true,"items":1,"margin":0,"autoplay":true,"autoplayTimeout":5000,"autoplayHoverPause":true,"smartSpeed":800,"nav":true,"dots":true}'>
+                                <?php foreach ( $feat_posts as $post ) : setup_postdata( $post );
+                                    $fthumb = has_post_thumbnail()
+                                        ? get_the_post_thumbnail_url( null, 'large' )
+                                        : $default_thumb;
+                                    $fexcerpt = has_excerpt()
+                                        ? get_the_excerpt()
+                                        : wp_trim_words( strip_tags( get_the_content() ), 22, '…' );
+                                    $fcats    = get_the_category();
+                                    $fcatname = $fcats ? $fcats[0]->name : 'Вести'; ?>
+                                <a href="<?php the_permalink(); ?>" class="sd-feat-slide">
+                                    <img src="<?php echo esc_url( $fthumb ); ?>"
+                                         alt="<?php the_title_attribute(); ?>" class="sd-feat-img">
+                                    <span class="sd-feat-grad"></span>
+                                    <div class="sd-feat-caption">
+                                        <div class="sd-feat-meta">
+                                            <span class="sd-feat-cat"><?php echo esc_html( $fcatname ); ?></span>
+                                            <span class="sd-feat-date"><i class="fe-icon-clock"></i> <?php echo get_the_date( 'd. F Y.' ); ?></span>
+                                        </div>
+                                        <h3 class="sd-feat-title"><?php the_title(); ?></h3>
+                                        <?php if ( $fexcerpt ) : ?>
+                                        <p class="sd-feat-excerpt"><?php echo esc_html( $fexcerpt ); ?></p>
+                                        <?php endif; ?>
+                                        <span class="sd-feat-btn">Читајте опширније <i class="fe-icon-arrow-right"></i></span>
+                                    </div>
+                                </a>
+                                <?php endforeach; wp_reset_postdata(); ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+
                         <!-- ВЕСТИ -->
                         <h2 class="h3 block-title mb-4">Вести<small>Информације о активностима спортског друштва</small></h2>
                         <div class="row">
