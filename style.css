@@ -24017,38 +24017,39 @@ body.sd-mob-open { overflow: hidden; }
     color: #0c1835 !important;
 }
 
-/* Тачкице — пун ред преко дна картице, поравнате десно */
+/* Тачкице — пун ред преко дна, центриране (не могу да изађу из ивице) */
 .sd-featured-carousel .owl-dots {
     position: absolute !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: 1.3rem !important;
+    bottom: 1rem !important;
     top: auto !important;
-    width: auto !important;
+    width: 100% !important;
     margin: 0 !important;
-    padding: 0 1.7rem !important;
+    padding: 0 !important;
     z-index: 3;
-    text-align: right;
+    text-align: center;
     line-height: 1;
 }
 
 .sd-featured-carousel .owl-dots .owl-dot {
     display: inline-block;
     vertical-align: middle;
+    margin: 0 !important;
 }
 
 .sd-featured-carousel .owl-dots .owl-dot span {
     display: block;
-    width: 9px;
-    height: 9px;
-    margin: 0 4px;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px !important;
     background-color: rgba(255, 255, 255, 0.55) !important;
     opacity: 1;
     transition: all 0.3s;
 }
 
 .sd-featured-carousel .owl-dots .owl-dot.active span {
-    width: 26px;
+    width: 22px;
     border-radius: 5px;
     background-color: #e8b800 !important;
 }
@@ -24066,5 +24067,5 @@ body.sd-mob-open { overflow: hidden; }
     .sd-feat-btn { margin-top: 0.9rem; }
     .sd-featured-carousel .owl-nav button.owl-prev,
     .sd-featured-carousel .owl-nav button.owl-next { display: none !important; }
-    .sd-featured-carousel .owl-dots { bottom: 1rem !important; padding: 0 1.2rem !important; }
+    .sd-featured-carousel .owl-dots { bottom: 0.8rem !important; }
 }
