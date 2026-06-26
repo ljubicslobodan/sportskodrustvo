@@ -20,7 +20,7 @@
                                  class="sd-footer-logo">
                         </a>
                         <p class="sd-footer-about">
-                            Спортско друштво Врање 1093 — организација посвећена промовисању спорта и здравог начина живота у општини Врање.
+                            Спортско друштво Врање 1093 д.о.о. је спортска организација основана са циљем окупљања младих и одраслих спортиста свих узраста.
                         </p>
                         <div class="sd-footer-social">
                             <a href="https://www.facebook.com/profile.php?id=61570608391388" target="_blank" aria-label="Facebook">
